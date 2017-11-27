@@ -58,5 +58,13 @@
       ]
     }
   },
-  "license": "MIT"
+  "license": "MIT",
+  "wilton": {
+    "excludes": [
+      "test",
+      "History.md",
+      "License.md",
+      "Readme.md"
+    ]
+  }
 }

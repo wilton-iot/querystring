@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -22,7 +23,8 @@
 "use strict";
 
 // test using assert
-var qs = require('../');
+var qs = require('querystring/');
+var assert = require("assert");
 
 // folding block, commented to pass gjslint
 // {{{
@@ -208,3 +210,10 @@ exports['test nested in colon'] = function(assert) {
 
   assert.deepEqual({}, qs.parse(), 'parse undefined');
 };
+
+var forOwn = require("lodash/forOwn");
+forOwn(exports, function(fun) {
+    fun(assert);
+});
+
+return module.exports;});
