@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -23,7 +23,7 @@ define(function(){var require = WILTON_requiresync;var module = {exports: {}};va
 "use strict";
 
 // test using assert
-var qs = require('querystring/');
+var qs = require('querystring');
 var assert = require("assert");
 
 // folding block, commented to pass gjslint
@@ -216,4 +216,4 @@ forOwn(exports, function(fun) {
     fun(assert);
 });
 
-return module.exports;});
+require = requireOrig;});

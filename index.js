@@ -1,7 +1,7 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 'use strict';
 
 exports.decode = exports.parse = require('querystring/decode');
 exports.encode = exports.stringify = require('querystring/encode');
 
-return module.exports;});
+require = requireOrig;});
